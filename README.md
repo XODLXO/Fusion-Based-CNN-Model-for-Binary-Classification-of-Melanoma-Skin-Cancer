@@ -16,9 +16,9 @@ Size: 10,000 RGB images (JPEG format, 300×300 resolution)
 
 Split:
 
-Train: 5000 benign, 4605 malignant
+   Train: 5000 benign, 4605 malignant
 
-Test: 500 benign, 500 malignant
+   Test: 500 benign, 500 malignant
 
 Preprocessing:
 
@@ -44,12 +44,16 @@ Pass through dense layers with dropout regularization
 Final output: binary softmax prediction
 
 # Performance Metrics
-Model	Accuracy	Precision	Recall	F1 Score	Val Loss
-MobileNetV2	90.05%	48.49	48.50	48.40	0.2765
-InceptionV3	91.22%	33.00	33.00	32.97	0.4391
-ResNet50	78.17%	48.79	48.80	48.74	0.5709
-EfficientNetB0	51.75%	25.00	50.00	33.33	0.7906
-Proposed Fusion Model	92.34%	50.00	48.40	49.20	1.3007
+### 📊 Performance Metrics
+
+| **Model Name**       | **Accuracy (%)** | **Precision** | **Recall** | **F1 Score** | **Validation Loss** |
+|----------------------|------------------|---------------|------------|--------------|---------------------|
+| MobileNetV2          | 90.05            | 48.49         | 48.50      | 48.40        | 0.2765              |
+| InceptionV3          | 91.22            | 33.00         | 33.00      | 32.97        | 0.4391              |
+| ResNet50             | 78.17            | 48.79         | 48.80      | 48.74        | 0.5709              |
+| EfficientNetB0       | 51.75            | 25.00         | 50.00      | 33.33        | 0.7906              |
+| **Proposed Model**   | **92.34**        | **50.00**     | **48.40**  | **49.20**    | **1.3007**          |
+
 Despite a higher validation loss, the proposed model delivers reliable performance across all metrics, outperforming individual architectures in both generalization and prediction quality.
 
 # Visual Interpretability
